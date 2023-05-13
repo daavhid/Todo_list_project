@@ -1,10 +1,10 @@
 /* @font-face {
     font-family: 'moon';
-    src: url('../fonts/My_Soul/MySoul-Regular.ttf');
+    src: url('../../fonts/Lobster_Two/LobsterTwo-Bold.ttf');
 }
 @font-face {
     font-family: 'sun';
-    src: url('../fonts/Lobster/Lobster-Regular.ttf');
+    src: url('../../fonts/Indie_Flower/IndieFlower-Regular.ttf');
 } */
 *{
     padding: 0;
@@ -19,7 +19,8 @@ html{
 #home{
     min-height: 100vh;
     padding: 5rem 0;
-    background-color: aliceblue;
+    background-color: rgb(236, 246, 255);
+    overflow: hidden;
     /* background: linear-gradient(to right bottom, rgba(100, 91, 91, 0.829), rgba(92, 74, 74, 0.829)); */
 
   
@@ -28,42 +29,53 @@ html{
 
 .item{
     display: inline-block;
-    padding: 1.5rem;
-    margin-right: 20px;
-    width: 55%;
+    padding: 1rem;
+    /* margin-right: 20px; */
+    width: 100%;
     font-family: 'moon';
-    font-size: 30px;
-    /* box-shadow: inset -1px 0px 35px 1px rgb(124, 117, 117); */
-    /* text-shadow: -2px 1px 9px; */
+    font-size: 20px;
+    font-weight: 300;
+    outline: none;
+    border: 1px solid rgb(8, 15, 10);
+    /* opacity: .6; */
+    background-color: rgb(8, 15, 10);
+    color: white;
 }
 
 .item::placeholder{
    
-    text-align: center;
+    text-align: left;
+    color: white;
+    
     font-size: 20px;
-    letter-spacing: 2;
-    opacity: .8;
+    letter-spacing: 3px;
+    opacity: .6;
     /* text-shadow: -2px 1px 9px; */
+}
+
+.item:focus::placeholder{
+    opacity: .1;
 }
 
 div.input{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* width: 100%; */
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 .btn{
     display: inline-block;
-   
+    color: white;
     margin-left: 30px;
     font-family: 'sun';
     opacity: .7;
     padding: 15px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
 }
 
 div.todo-body{
-    box-shadow: -2px 6px 20px 8px rgba(73, 64, 66, 0.623);
+    box-shadow: -1px 3px 10px 3px rgba(73, 64, 66, 0.623);
     border-radius: 10px;
     max-width: 450px;
     margin: 3rem auto;
@@ -71,48 +83,53 @@ div.todo-body{
     font-size: 13px;
     font-family: 'moon';
     font-weight: lighter;
-    background-color: white;
+    background-color: rgb(85, 100, 90);
+    overflow: hidden;
 }
 
 
 div.heading{
     text-align: center;
     margin: 3rem auto;
-    /* box-shadow: inset -2px -2px 21px 3px; */
-    /* text-shadow: -2px 1px 9px; */
+    color: white;
     padding: 15px;
     font-size: 16px;
     font-weight: lighter;
     letter-spacing: 1;
-    border: 1px solid gray;
+    border: 1px solid rgb(8, 15, 10);
 }
 
 h1{
-    opacity: .25;
+    /* opacity: .25; */
+    font-weight: 100;
 }
 
 .hidden{
     text-align: center;
     padding: 60px;
-    opacity: .5;
+    opacity: .9;
     font-weight: 900;
+    color: white;
 }
 ul{
     width: 100%;
+    
 
 }
 ul li{
     list-style:none;
-    padding:0px 0 10px 0;
-    letter-spacing: 3px;
+    padding:20px 10px;
+    letter-spacing: 2px;
     line-height: 1;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    overflow-wrap: break-word;
-   
-    
-
+    overflow-wrap:break-word;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(8, 15, 10);
+    color: white;
 }
 
 ul li:first-child{
@@ -120,51 +137,47 @@ ul li:first-child{
 }
 ul li input{
     display: inline-block;
-    margin: 10px;
-    transform: scale(2);
+    margin-left: 15px;
+    transform: scale(1);
 }
 ul li span{
-    margin-left: 40px;
+    margin-left: 20px;
     display: inline-block;
-    border: 1px solid black;
+    overflow: hidden;
     border-top: 0;
     border-right: 0;
-    padding: 15px 6px;
     border-left: 0;
-    opacity: .8;
-    width: 67%;
+    flex: 1 1 100%;
     font-size: 20px;
 } 
-.todo-btn{
-    /* float: right;
-    clear: both;
-     */
-    margin-right: 0%;
-    z-index: -1;
-    opacity: .5;
-    border: none;
-    
 
-
-}
 
 .buttons{
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    z-index: 1;
+    /* opacity: .2; */
+    
+}
+.completed{
+    margin-top: 30px;
+    /* display:none */
+    display: none;
+}
+.completed p{
+    color:white ;
+    margin-left: 10px;
+    font-size: 18px;
+    transform: translateY(-60%);
     
 }
 
 .clear{
     background-color: #a0a095;
+    background-color: rgb(8, 15, 10);
     margin-top: 20px;
-}
-.undo{
-    margin-left: 10px;
-    background-color: #a0a095;
-    margin-top: 20px;
+    opacity: .9;
+    
 }
 
-.checklist{
-    text-decoration: line-through;
-}

@@ -87,7 +87,7 @@ function listAdder(eventEl,parentEl){
             newLi.innerHTML = `<input type="checkbox"><span>${newItem}</span> <button class="btn todo-btn">remove</button>`;
             parentEl.append(newLi)
             this.value = ''
-            hidden(parentEl)
+            // hidden(parentEl)
             clickRemoverBtn(parentEl)
             checkList()
 
@@ -117,7 +117,7 @@ function undo(parentEl,removedNodes){
             
             removedNodes.forEach(node=>{
                 parentEl.append(node)
-                hidden(parentEl)
+                // hidden(parentEl)
             })
         } ) 
 } 
@@ -131,12 +131,13 @@ btn.addEventListener('click',function(){
         console.log(li,lis)
         undo(ulItem,lis)
     })
-    hidden(ulItem)
+    // hidden(ulItem)
     
 })
 
 function checkList(){
     const allInputs = document.querySelectorAll('li input');
+    console.log(allInputs)
     for(let input of allInputs){
         
         input.addEventListener('click',function(){
@@ -147,6 +148,7 @@ function checkList(){
                 input.nextElementSibling.style.opacity = '.5'
                 btn.style.zIndex = '1';
                 btn.style.opacity = '.9'
+                console.log(btn)
 
             }
             else{
