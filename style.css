@@ -125,7 +125,7 @@ ul li{
     justify-content: space-around;
     align-items: center;
     overflow-wrap:break-word;
-    border: 1px solid gray;
+    border: 1px solid rgb(8, 15, 10);
     border-radius: 10px;
     margin-bottom: 10px;
     background-color: rgb(8, 15, 10);
@@ -177,7 +177,7 @@ ul li span{
     background-color: #a0a095;
     background-color: rgb(8, 15, 10);
     margin-top: 20px;
-    opacity: .9;
+    opacity: .2;
     
 }
 
